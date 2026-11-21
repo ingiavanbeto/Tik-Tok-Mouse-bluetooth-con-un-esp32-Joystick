@@ -172,12 +172,6 @@ El clic derecho **no existe por ahora**: el código solo usa `MouseButton::Left`
 3. Autor: **hijelhub**
 4. Dale a **Instalar**.
 
-### ❌ ¿Por qué NO la librería clásica de T-vK?
-
-La librería clásica **"ESP32 BLE Mouse" de T-vK** es la que sale primero en el buscador, pero **NO compila con el core ESP32 3.3.12**, igual que pasaba con su librería de teclado: usa `std::string` donde el core 3.x ya espera `String`, y falla dentro de la librería misma, no en tu código.
-
-**HijelHID_BLEMouse está hecha para el core 3.x y usa NimBLE**, por eso es la que funcionó al final. Es la librería hermana de `HijelHID_BLEKeyboard`, la del proyecto del teclado multimedia.
-
 ---
 
 ## 💻 Instalación y carga del código
@@ -328,14 +322,6 @@ void loop() {
 | El clic simple tarda un poco | Es normal | Espera 350 ms para ver si viene un segundo clic y hacerlo doble |
 
 ---
-
-## 🚀 Ideas para ampliarlo
-
-- [ ] Agregar **clic derecho** con un botón aparte (por ahora no existe)
-- [ ] Agregar **scroll** con un segundo joystick o con el eje Y al mantener pulsado SW
-- [ ] Poner un **OLED** que muestre si está conectado y la velocidad
-- [ ] Usar el joystick como **mouse + teclado a la vez** (mover + teclas multimedia)
-- [ ] Alimentarlo con batería LiPo + TP4056 para hacerlo portátil
 
 ---
 
